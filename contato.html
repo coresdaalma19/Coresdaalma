@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Central</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #171735;
+      --bg-deep-2: #1f1f47;
+      --panel: rgba(255, 255, 255, 0.06);
+      --panel-border: rgba(255, 255, 255, 0.12);
+      --ink: #F5F3FF;
+      --ink-dim: #B9B6D9;
+      --joy: #FFD93D;
+      --joy-hover: #e6c230;
+      --input-bg: rgba(255, 255, 255, 0.08);
+      --input-border: rgba(255, 255, 255, 0.18);
+      --input-focus: #FFD93D;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, var(--bg-deep-2), var(--bg-deep) 70%);
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: var(--ink);
+    }
+    .stage {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 40px 20px;
+    }
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1100px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .nav-logo {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--joy); }
+    .contact-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 800px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 28px;
+      padding: 40px;
+      margin: auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 0.8s ease-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .contact-header { text-align: center; margin-bottom: 32px; }
+    .contact-header h1 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 2.5rem;
+      color: var(--joy);
+      margin-bottom: 8px;
+    }
+    .contact-header p { color: var(--ink-dim); font-size: 0.98rem; line-height: 1.5; }
+    .contact-grid { display: flex; gap: 32px; }
+    .contact-form {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 0.85rem;
+      color: var(--ink-dim);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 12px;
+      color: var(--ink);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--input-focus);
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .btn-submit {
+      background: var(--joy);
+      color: #171735;
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 8px;
+    }
+    .btn-submit:hover {
+      background: var(--joy-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 217, 61, 0.25);
+    }
+    .btn-submit:active { transform: translateY(0); }
+    .contact-info {
+      flex: 0.8;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .info-item h3 {
+      font-family: 'Baloo 2', sans-serif;
+      color: var(--joy);
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    .info-item p { color: var(--ink-dim); font-size: 0.88rem; line-height: 1.5; }
+    .social-links { display: flex; gap: 12px; margin-top: 8px; }
+    .social-card {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--panel-border);
+      border-radius: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+    .social-card:hover {
+      background: var(--joy);
+      color: #171735;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { flex-direction: column; }
+      .contact-container { padding: 28px 20px; }
+      .navbar { flex-direction: column; gap: 10px; border-radius: 20px; padding: 12px; }
+      .nav-links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Central</a>
+      <div class="nav-links">
+        <a href="quemsomos.html">Quem Somos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="emocoes.html">Emoções</a>
+        <a href="contato.html" class="active">Contato</a>
+      </div>
+    </nav>
+    <div class="contact-container">
+      <div class="contact-header">
+        <h1>Entre em Contato</h1>
+        <p>Quer expor sua arte, tirar dúvidas ou conversar com nossa equipe? Mande uma mensagem!</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Ex: Quero divulgar minha arte" required>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+        <div class="contact-info">
+          <div>
+            <div class="info-item" style="margin-bottom: 20px;">
+              <h3>Mande um E-mail</h3>
+              <p>cored.alma@gmail.com</p>
+            </div>
+            <div class="info-item" style="margin-bottom: 20px;">
+              <h3>Nosso Propósito</h3>
+              <p>Espaço dedicado a acolher e incentivar a expressão artística de pessoas neurodivergentes.</p>
+            </div>
+            <div class="info-item">
+              <h3>Redes Sociais</h3>
+              <div class="social-links">
+                <a href="https://www.instagram.com/core.sdaalma" class="social-card" target="_blank">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

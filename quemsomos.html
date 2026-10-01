@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #171735;
+      --bg-deep-2: #1f1f47;
+      --panel: rgba(255,255,255,0.06);
+      --panel-border: rgba(255,255,255,0.12);
+      --ink: #F5F3FF;
+      --ink-dim: #B9B6D9;
+      --joy: #FFD93D;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, var(--bg-deep-2), var(--bg-deep) 70%);
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+    .stage {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 110px 24px 60px;
+    }
+    .navbar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1100px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .nav-logo {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--joy); }
+    .content-box {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 48px;
+      color: var(--ink);
+      max-width: 600px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 28px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      animation: fadeInUp 0.8s ease-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .content-box h1 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      color: var(--joy);
+    }
+    .content-box p { color: var(--ink-dim); line-height: 1.7; }
+    @media (max-width: 768px) {
+      .navbar { flex-direction: column; gap: 10px; border-radius: 20px; padding: 12px; }
+      .nav-links { gap: 16px; }
+      .content-box { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Central</a>
+      <div class="nav-links">
+        <a href="quemsomos.html" class="active">Quem Somos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="emocoes.html">Emoções</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+    <div class="content-box">
+      <h1>Quem Somos</h1>
+      <p>Somos um projeto feito por estudantes que busca dar visibilidade e incentivar artistas neurodivergentes. Queremos mostrar que, não importa as suas dificuldades, você ainda pode se expressar através da arte!</p>
+    </div>
+  </div>
+</body>
+</html>
