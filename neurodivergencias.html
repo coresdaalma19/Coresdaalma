@@ -16,14 +16,14 @@
       --bg-deep-2: #1f1f47;
 
       /* Cores das Neurodivergências */
-      --autismo: #00A3FF;       /* Azul */
-      --autismo-glow: rgba(0, 163, 255, 0.4);
-      --dislexia: #FF7300;      /* Laranja */
-      --dislexia-glow: rgba(255, 115, 0, 0.4);
+      --autismo: #4CAF7D;       /* Verde */
+      --autismo-glow: rgba(76, 175, 125, 0.4);
+      --dislexia: #00A3FF;      /* Azul */
+      --dislexia-glow: rgba(0, 163, 255, 0.4);
       --tdah: #FFD93D;          /* Amarelo */
       --tdah-glow: rgba(255, 217, 61, 0.4);
-      --dispraxia: #4CAF7D;     /* Verde */
-      --dispraxia-glow: rgba(76, 175, 125, 0.4);
+      --dispraxia: #FF7300;     /* Laranja */
+      --dispraxia-glow: rgba(255, 115, 0, 0.4);
       --tourette: #E8462B;      /* Vermelho */
       --tourette-glow: rgba(232, 70, 43, 0.4);
       --superdotacao: #7B4FA0;  /* Roxo */
@@ -52,7 +52,6 @@
       color: var(--ink);
     }
 
-    /* Textura de estrelas/poeira mental no fundo */
     body::before {
       content: "";
       position: fixed;
@@ -131,15 +130,6 @@
       animation: fadeInUp 0.8s ease-out;
     }
 
-    .eyebrow {
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: var(--ink-dim);
-      margin-bottom: 12px;
-    }
-
     .page-header h1 {
       font-family: 'Baloo 2', sans-serif;
       font-weight: 800;
@@ -168,6 +158,14 @@
       gap: 28px;
     }
 
+    /* Regra para integrar o link ao card */
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      cursor: pointer;
+    }
+
     .card {
       position: relative;
       background: var(--panel);
@@ -180,6 +178,7 @@
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       animation: fadeInUp 0.8s ease-out;
       overflow: hidden;
+      height: 100%;
     }
 
     .card:hover {
@@ -342,51 +341,63 @@
   <main class="container">
     <header class="page-header">
       <h1>Neurodivergências</h1>
-      <p>neurodivergencia se refere a uma condição onde a pessoa tem diferenças neurológicas, comportamentais, de comunicação e aprendizagem considerado fora do padrão esperado pela sociedade.</p>
+      <p>Neurodivergência refere-se a uma condição em que a pessoa apresenta diferenças neurológicas, comportamentais, de comunicação e de aprendizagem consideradas fora do padrão esperado pela sociedade.</p>
     </header>
 
     <div class="grid">
-      <!-- Autismo -->
-      <article class="card autismo">
-        <span class="card-icon"></span>
-        <h2>Autismo (TEA)</h2>
-        <p>O Transtorno do Espectro Autista envolve formas únicas de se comunicar, interagir e perceber o mundo. Pessoas no espectro costumam ter focos intensos de interesse e sensibilidades sensoriais próprias.</p>
-      </article>
+      <!-- Autismo (Verde) -->
+      <a href="autismo.html" class="card-link">
+        <article class="card autismo">
+          <span class="card-icon"></span>
+          <h2>Autismo (TEA)</h2>
+          <p>O Transtorno do Espectro Autista envolve formas únicas de se comunicar, interagir e perceber o mundo. Pessoas no espectro costumam ter focos intensos de interesse e sensibilidades sensoriais próprias.</p>
+        </article>
+      </a>
 
-      <!-- Dislexia -->
-      <article class="card dislexia">
-        <span class="card-icon"></span>
-        <h2>Dislexia</h2>
-        <p>É um transtorno específico de aprendizagem caracterizado por dificuldades na leitura e/ou na escrita,  que envolvem precisão, velocidade ou ambos.</p>
-      </article>
+      <!-- Dislexia (Azul) -->
+      <a href="dislexia.html" class="card-link">
+        <article class="card dislexia">
+          <span class="card-icon"></span>
+          <h2>Dislexia</h2>
+          <p>É um transtorno específico de aprendizagem caracterizado por dificuldades na leitura e/ou na escrita, que envolvem precisão, velocidade ou ambos.</p>
+        </article>
+      </a>
 
-      <!-- TDAH -->
-      <article class="card tdah">
-        <span class="card-icon"></span>
-        <h2>TDAH</h2>
-        <p>O Transtorno do Déficit de Atenção com Hiperatividade é marcado por inquietude, impulsividade e variações na atenção. Pensamentos rápidos, hiperfoco e intuição aflorada são marcas marcantes do TDAH.</p>
-      </article>
+      <!-- TDAH (Amarelo) -->
+      <a href="tdah.html" class="card-link">
+        <article class="card tdah">
+          <span class="card-icon"></span>
+          <h2>TDAH</h2>
+          <p>O Transtorno do Déficit de Atenção com Hiperatividade é marcado por inquietude, impulsividade e variações na atenção. Pensamentos rápidos, hiperfoco e intuição aflorada são marcas marcantes do TDAH.</p>
+        </article>
+      </a>
 
-      <!-- Dispraxia -->
-      <article class="card dispraxia">
-        <span class="card-icon"></span>
-        <h2>Dispraxia (TDC)</h2>
-        <p>É uma disfunção neurológica que afeta a coordenação motora, verbal e espacial da criança, podendo seguir na fase adulta.</p>
-      </article>
+      <!-- Dispraxia (Laranja) -->
+      <a href="dispraxia.html" class="card-link">
+        <article class="card dispraxia">
+          <span class="card-icon"></span>
+          <h2>Dispraxia (TDC)</h2>
+          <p>É uma disfunção neurológica que afeta a coordenação motora, verbal e espacial da criança, podendo seguir na fase adulta.</p>
+        </article>
+      </a>
 
-      <!-- Tourette -->
-      <article class="card tourette">
-        <span class="card-icon"></span>
-        <h2>Síndrome de Tourette</h2>
-        <p>Caracterizada por tiques motores e vocais involuntários e repetitivos. É uma condição neurobiológica que reflete a intensidade das conexões cerebrais e respostas motoras espontâneas.</p>
-      </article>
+      <!-- Tourette (Vermelho) -->
+      <a href="tourette.html" class="card-link">
+        <article class="card tourette">
+          <span class="card-icon"></span>
+          <h2>Síndrome de Tourette</h2>
+          <p>Caracterizada por tiques motores e vocais involuntários e repetitivos. É uma condição neurobiológica que reflete a intensidade das conexões cerebrais e respostas motoras espontâneas.</p>
+        </article>
+      </a>
 
-      <!-- Superdotação -->
-      <article class="card superdotacao">
-        <span class="card-icon"></span>
-        <h2>Superdotação</h2>
-        <p>Capacidade cognitiva acima da média em áreas intelectuais, criativas ou artísticas, muitas vezes acompanhada de alta intensidade emocional e curiosidade profunda sobre o mundo.</p>
-      </article>
+      <!-- Superdotação (Roxo) -->
+      <a href="superdotacao.html" class="card-link">
+        <article class="card superdotacao">
+          <span class="card-icon"></span>
+          <h2>Superdotação</h2>
+          <p>Capacidade cognitiva acima da média em áreas intelectuais, criativas ou artísticas, muitas vezes acompanhada de alta intensidade emocional e curiosidade profunda sobre o mundo.</p>
+        </article>
+      </a>
     </div>
   </main>
 
