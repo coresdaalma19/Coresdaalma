@@ -154,6 +154,84 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(255, 217, 61, 0.25);
     }
+
+    /* Rodapé */
+    .site-footer {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background: var(--panel);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      color: var(--ink);
+      padding: 40px 24px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Baloo 2', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--joy);
+    }
+
+    .footer-brand p {
+      color: var(--ink-dim);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .footer-links h4, .footer-social h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a, .social-icons a {
+      color: var(--ink-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
+    }
+
+    .footer-links a:hover, .social-icons a:hover {
+      color: var(--joy);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 20px auto 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--ink-dim);
+    }
+
+    /* Responsividade */
     @media (max-width: 768px) {
       .about-container { padding: 32px 20px; }
       .about-header h1 { font-size: 2.2rem; }
@@ -161,6 +239,7 @@
       .navbar { flex-direction: column; gap: 10px; border-radius: 20px; padding: 12px; }
       .nav-links { gap: 16px; }
     }
+
   </style>
 </head>
 <body>
