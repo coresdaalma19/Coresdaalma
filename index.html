@@ -46,6 +46,7 @@
   --c-maroon: #800000;
 
   --panel: rgba(255,255,255,0.06);
+  --panel-border: rgba(255, 255, 255, 0.12);
   --ink: #F5F3FF;
   --ink-dim: #B9B6D9;
 }
@@ -81,6 +82,53 @@ body::before {
   opacity: 0.6;
   pointer-events: none;
   z-index: 0;
+}
+
+/* Navbar Padronizada */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-logo {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--joy);
 }
 
 .stage {
@@ -234,7 +282,14 @@ p.sub {
   100% { opacity: 0; top: 7px; }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
+  .navbar { 
+    flex-direction: column; 
+    gap: 10px; 
+    border-radius: 20px; 
+    padding: 12px; 
+  }
+  .nav-links { gap: 16px; }
   .panel { padding: 40px 26px; }
 }
 
@@ -327,6 +382,19 @@ p.sub {
 </style>
 </head>
 <body>
+
+<!-- Menu de Navegação Superior (Logo + Links) -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <img src="LOGOTIPO CORES DA ALMA (1).ai" alt="Cores da Alma" style="height: 32px; width: auto; vertical-align: middle;">
+  </a>
+  <div class="nav-links">
+    <a href="quemsomos.html">Quem Somos</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="neurodivergencias.html">Neurodivergências</a>
+    <a href="contato.html">Contato</a>
+  </div>
+</nav>
 
 <div class="stage">
   <!-- Esferas Originais -->
