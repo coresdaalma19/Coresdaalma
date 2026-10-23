@@ -100,6 +100,187 @@
       .nav-links { gap: 16px; }
       .content-box { padding: 32px 24px; }
     }
+
+/* ==========================================
+   ESTILOS DA SEÇÃO DE EQUIPE
+   ========================================== */
+.team-section {
+margin-top: 40px;
+padding-top: 36px;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+text-align: left;
+}
+
+.team-header {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.team-header h2 {
+font-family: 'Baloo 2', sans-serif;
+font-size: 2rem;
+color: var(--joy);
+margin-bottom: 6px;
+}
+
+.team-header p {
+color: var(--ink-dim);
+font-size: 0.95rem;
+}
+
+.team-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.team-card {
+background: var(--card-bg);
+border: 1px solid var(--panel-border);
+border-radius: 20px;
+padding: 20px 16px;
+text-align: center;
+transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+transform: translateY(-5px);
+border-color: var(--joy);
+}
+
+.team-avatar {
+width: 90px;
+height: 90px;
+margin: 0 auto 16px auto;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid var(--joy);
+background: var(--bg-deep-2);
+}
+
+.team-avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.team-card h3 {
+font-family: 'Baloo 2', sans-serif;
+color: var(--ink);
+font-size: 1.1rem;
+margin-bottom: 4px;
+}
+
+.team-role {
+color: var(--joy);
+font-size: 0.8rem;
+font-weight: 600;
+margin-bottom: 8px;
+display: block;
+}
+
+.team-card p {
+color: var(--ink-dim);
+font-size: 0.8rem;
+line-height: 1.4;
+}
+
+/* ==========================================
+   ESTILOS DO RODAPÉ (FOOTER)
+   ========================================== */
+.site-footer {
+width: 100%;
+background: rgba(15, 15, 35, 0.8);
+border-top: 1px solid var(--panel-border);
+padding: 50px 20px 20px;
+margin-top: 80px;
+z-index: 2;
+position: relative;
+}
+
+.footer-container {
+max-width: 1100px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+gap: 40px;
+margin-bottom: 30px;
+}
+
+.footer-brand h3 {
+font-family: 'Baloo 2', sans-serif;
+color: var(--joy);
+font-size: 1.3rem;
+margin-bottom: 10px;
+}
+
+.footer-brand p, .footer-links ul li a, .footer-bottom p {
+color: var(--ink-dim);
+font-size: 0.9rem;
+line-height: 1.6;
+}
+
+.footer-links h4, .footer-social h4 {
+font-family: 'Baloo 2', sans-serif;
+color: var(--ink);
+font-size: 1.1rem;
+margin-bottom: 12px;
+}
+
+.footer-links ul {
+list-style: none;
+}
+
+.footer-links ul li {
+margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+color: var(--joy);
+}
+
+.social-icons a {
+display: inline-block;
+color: var(--ink-dim);
+background: var(--panel);
+border: 1px solid var(--panel-border);
+padding: 8px 16px;
+border-radius: 999px;
+text-decoration: none;
+font-size: 0.9rem;
+transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+color: #171735;
+background: var(--joy);
+border-color: var(--joy);
+}
+
+.footer-bottom {
+max-width: 1100px;
+margin: 0 auto;
+padding-top: 20px;
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+text-align: center;
+}
+
+@media (max-width: 900px) {
+.team-grid { grid-template-columns: repeat(2, 1fr); }
+.footer-container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+}
+
+@media (max-width: 768px) {
+.navbar { flex-direction: column; gap: 10px; border-radius: 20px; padding: 12px; }
+.nav-links { gap: 16px; }
+.content-box { padding: 32px 20px; }
+.team-grid { grid-template-columns: 1fr; gap: 16px; }
+}
   </style>
 </head>
 <body>
@@ -118,5 +299,81 @@
       <p>Somos um projeto feito por estudantes que busca dar visibilidade e incentivar artistas neurodivergentes. Queremos mostrar que, não importa as suas dificuldades, você ainda pode se expressar através da arte!</p>
     </div>
   </div>
+
+
+<!-- SEÇÃO DE EQUIPE ADICIONADA -->
+<div class="team-section">
+<div class="team-header">
+<h2>Quem Faz Acontecer</h2>
+<p>Conheça os estudantes responsáveis pelo desenvolvimento do projeto.</p>
+</div>
+<div class="team-grid">
+<div class="team-card">
+<div class="team-avatar">
+<img src="Sarah.jpg" alt="Participante 1">
+</div>
+<h3>Nome 1</h3>
+<span class="team-role">Desenvolvimento & Design</span>
+<p>Responsável pela estrutura e identidade visual do projeto.</p>
+</div>
+
+<div class="team-card">
+<div class="team-avatar">
+<img src="Ket.jpg" alt="Participante 2">
+</div>
+<h3>Nome 2</h3>
+<span class="team-role">Pesquisa & Conteúdo</span>
+<p>Focado na curadoria de informações sobre neurodivergências.</p>
+</div>
+
+<div class="team-card">
+<div class="team-avatar">
+<img src="Bia.jpg" alt="Participante 3">
+</div>
+<h3>Nome 3</h3>
+<span class="team-role">Estratégia & Mídia</span>
+<p>Gerenciamento de comunicação e engajamento da plataforma.</p>
+</div>
+
+<div class="team-card">
+<div class="team-avatar">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Participante 4">
+</div>
+<h3>Nome 4</h3>
+<span class="team-role">Apresentação & Testes</span>
+<p>Organização geral do projeto e validação de acessibilidade.</p>
+</div>
+</div>
+</div>
+<!-- FIM DA SEÇÃO DE EQUIPE -->
+
+  <!--Rodapé-->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Central das Neurodivergências</h3>
+        <p>Explorando nuances, emoções e a diversidade da mente humana através da arte.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="quemsomos.html">Quem Somos</a></li>
+          <li><a href="sobre.html">Sobre o Projeto</a></li>
+          <li><a href="neurodivergencias.html">Neurodivergência</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Conecte-se</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/core.sdaalma" target="_blank" aria-label="Instagram">Instagram</a> 
+        </div>
+      </div>
+    </div>
+    <div  class="footer-bottom">
+      <p>&copy; 2026 Cores da Alma. Todos direitos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
