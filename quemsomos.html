@@ -1,401 +1,401 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quem Somos - Central</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg-deep: #171735;
-      --bg-deep-2: #1f1f47;
-      --panel: rgba(255, 255, 255, 0.06);
-      --panel-border: rgba(255, 255, 255, 0.12);
-      --card-bg: rgba(255, 255, 255, 0.04);
-      --ink: #F5F3FF;
-      --ink-dim: #B9B6D9;
-      --joy: #FFD93D;
-      --joy-hover: #e6c230;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem Somos - Central</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #171735;
+  --bg-deep-2: #1f1f47;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-border: rgba(255, 255, 255, 0.12);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --ink: #F5F3FF;
+  --ink-dim: #B9B6D9;
+  --joy: #FFD93D;
+  --joy-hover: #e6c230;
+}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body {
-      min-height: 100vh;
-      background: radial-gradient(ellipse at 50% 20%, var(--bg-deep-2), var(--bg-deep) 70%);
-      overflow-x: hidden;
-      font-family: 'Poppins', sans-serif;
-      color: var(--ink);
-    }
+html, body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 20%, var(--bg-deep-2), var(--bg-deep) 70%);
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+}
 
-    .stage {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 110px 24px 60px;
-    }
+.stage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 24px 60px;
+}
 
-    /* NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1100px;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 28px;
-      border-radius: 999px;
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
 
-    .nav-logo {
-      font-family: 'Baloo 2', sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
+.nav-logo {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
 
-    .nav-links { display: flex; gap: 24px; }
+.nav-links { display: flex; gap: 24px; }
 
-    .nav-links a {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: var(--ink-dim);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+.nav-links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-    .nav-links a:hover, .nav-links a.active { color: var(--joy); }
+.nav-links a:hover, .nav-links a.active { color: var(--joy); }
 
-    /* CONTENT BOX */
-    .content-box {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 48px;
-      color: var(--ink);
-      width: 100%;
-      max-width: 900px;
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: 28px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-      animation: fadeInUp 0.8s ease-out;
-      margin-bottom: 40px;
-    }
+/* CONTENT BOX */
+.content-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 48px;
+  color: var(--ink);
+  width: 100%;
+  max-width: 900px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out;
+  margin-bottom: 40px;
+}
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .content-box h1 {
-      font-family: 'Baloo 2', sans-serif;
-      font-size: 2.8rem;
-      margin-bottom: 16px;
-      color: var(--joy);
-    }
+.content-box h1 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  color: var(--joy);
+}
 
-    .content-box p {
-      color: var(--ink-dim);
-      line-height: 1.7;
-      font-size: 1.05rem;
-      max-width: 750px;
-      margin: 0 auto;
-    }
+.content-box p {
+  color: var(--ink-dim);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
 
-    /* SEÇÃO DE EQUIPE */
-    .team-container {
-      width: 100%;
-      max-width: 900px;
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: 28px;
-      padding: 40px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-      animation: fadeInUp 0.8s ease-out 0.2s cubic-bezier(0.1, 0, 0.1, 1) both;
-    }
+/* SEÇÃO DE EQUIPE */
+.team-container {
+  width: 100%;
+  max-width: 900px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out 0.2s cubic-bezier(0.1, 0, 0.1, 1) both;
+}
 
-    .team-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.team-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .team-header h2 {
-      font-family: 'Baloo 2', sans-serif;
-      font-size: 2.2rem;
-      color: var(--joy);
-      margin-bottom: 8px;
-    }
+.team-header h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2.2rem;
+  color: var(--joy);
+  margin-bottom: 8px;
+}
 
-    .team-header p {
-      color: var(--ink-dim);
-      font-size: 0.95rem;
-    }
+.team-header p {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
 
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
-    .team-card {
-      background: var(--card-bg);
-      border: 1px solid var(--panel-border);
-      border-radius: 20px;
-      padding: 20px 16px;
-      text-align: center;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
+.team-card {
+  background: var(--card-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
 
-    .team-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--joy);
-    }
+.team-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--joy);
+}
 
-    .team-avatar {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 16px auto;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--joy);
-      background: var(--bg-deep-2);
-    }
+.team-avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 16px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--joy);
+  background: var(--bg-deep-2);
+}
 
-    .team-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .team-card h3 {
-      font-family: 'Baloo 2', sans-serif;
-      color: var(--ink);
-      font-size: 1.1rem;
-      margin-bottom: 4px;
-    }
+.team-card h3 {
+  font-family: 'Baloo 2', sans-serif;
+  color: var(--ink);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
 
-    .team-role {
-      color: var(--joy);
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-      display: block;
-    }
+.team-role {
+  color: var(--joy);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
 
-    .team-card p {
-      color: var(--ink-dim);
-      font-size: 0.8rem;
-      line-height: 1.4;
-    }
+.team-card p {
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
 
-    /* FOOTER */
-    .site-footer {
-      width: 100%;
-      background: rgba(15, 15, 35, 0.8);
-      border-top: 1px solid var(--panel-border);
-      padding: 50px 20px 20px;
-      margin-top: 60px;
-      z-index: 2;
-      position: relative;
-    }
+/* RODAPÉ (Padronizado com as outras páginas) */
+.site-footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: var(--panel);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--ink);
+  padding: 40px 24px 20px;
+  margin-top: 60px;
+}
 
-    .footer-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 30px;
-    }
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-    .footer-brand h3 {
-      font-family: 'Baloo 2', sans-serif;
-      color: var(--joy);
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
+.footer-brand h3 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--joy);
+}
 
-    .footer-brand p, .footer-links ul li a, .footer-bottom p {
-      color: var(--ink-dim);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
+.footer-brand p {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
 
-    .footer-links h4, .footer-social h4 {
-      font-family: 'Baloo 2', sans-serif;
-      color: var(--ink);
-      font-size: 1.1rem;
-      margin-bottom: 12px;
-    }
+.footer-links h4, .footer-social h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
 
-    .footer-links ul { list-style: none; }
-    .footer-links ul li { margin-bottom: 8px; }
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .footer-links ul li a {
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+.footer-links li {
+  margin-bottom: 8px;
+}
 
-    .footer-links ul li a:hover { color: var(--joy); }
+.footer-links a, .social-icons a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+}
 
-    .social-icons a {
-      display: inline-block;
-      color: var(--ink-dim);
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      padding: 8px 16px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    }
+.footer-links a:hover, .social-icons a:hover {
+  color: var(--joy);
+}
 
-    .social-icons a:hover {
-      color: #171735;
-      background: var(--joy);
-      border-color: var(--joy);
-    }
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
 
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      text-align: center;
-    }
+.footer-bottom {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+}
 
-    /* RESPONSIVIDADE */
-    @media (max-width: 900px) {
-      .team-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-    }
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
-    @media (max-width: 768px) {
-      .navbar { flex-direction: column; gap: 10px; border-radius: 20px; padding: 12px; }
-      .nav-links { gap: 16px; }
-      .content-box { padding: 32px 20px; }
-      .content-box h1 { font-size: 2.2rem; }
-      .team-container { padding: 32px 20px; }
-      .team-grid { grid-template-columns: 1fr; gap: 16px; }
-    }
-  </style>
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; gap: 10px; border-radius: 20px; padding: 12px; }
+  .nav-links { gap: 16px; }
+  .content-box { padding: 32px 20px; }
+  .content-box h1 { font-size: 2.2rem; }
+  .team-container { padding: 32px 20px; }
+  .team-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+</style>
 </head>
 <body>
 
-  <div class="stage">
-    <!-- Navegação -->
-    <nav class="navbar">
-      <a href="index.html" class="nav-logo">Central</a>
-      <div class="nav-links">
-        <a href="quemsomos.html" class="active">Quem Somos</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="neurodivergencias.html">Neurodivergências</a>
-        <a href="contato.html">Contato</a>
-      </div>
-    </nav>
-
-    <!-- Apresentação Principal -->
-    <div class="content-box">
-      <h1>Quem Somos</h1>
-      <p>Somos um projeto feito por estudantes que busca dar visibilidade e incentivar artistas neurodivergentes. Queremos mostrar que, não importa as suas dificuldades, você ainda pode se expressar através da arte!</p>
+<div class="stage">
+  <!-- Navegação -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Central</a>
+    <div class="nav-links">
+      <a href="quemsomos.html" class="active">Quem Somos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="neurodivergencias.html">Neurodivergências</a>
+      <a href="contato.html">Contato</a>
     </div>
+  </nav>
 
-    <!-- Seção da Equipe -->
-    <div class="team-container">
-      <div class="team-header">
-        <h2>Quem Faz Acontecer</h2>
-        <p>Conheça os estudantes responsáveis pelo desenvolvimento do projeto.</p>
+  <!-- Apresentação Principal -->
+  <div class="content-box">
+    <h1>Quem Somos</h1>
+    <p>Somos um projeto feito por estudantes que busca dar visibilidade e incentivar artistas neurodivergentes. Queremos mostrar que, não importa as suas dificuldades, você ainda pode se expressar através da arte!</p>
+  </div>
+
+  <!-- Seção da Equipe -->
+  <div class="team-container">
+    <div class="team-header">
+      <h2>Quem Faz Acontecer</h2>
+      <p>Conheça os estudantes responsáveis pelo desenvolvimento do projeto.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="Sarah.jpg" alt="Sarah">
+        </div>
+        <h3>Sarah</h3>
+        <span class="team-role">Desenvolvimento & Design</span>
+        <p>Responsável pela estrutura e identidade visual do projeto.</p>
       </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar">
-            <img src="Sarah.jpg" alt="Pessoa 1">
-          </div>
-          <h3>Sarah</h3>
-          <span class="team-role">Desenvolvimento & Design</span>
-          <p>Responsável pela estrutura e identidade visual do projeto.</p>
-        </div>
 
-        <div class="team-card">
-          <div class="team-avatar">
-            <img src="Ket.jpg" alt="Pessoa 2">
-          </div>
-          <h3>Ketlen</h3>
-          <span class="team-role">Pesquisa & Conteúdo</span>
-          <p>Focado na curadoria de informações sobre neurodivergências.</p>
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="Ket.jpg" alt="Ketlen">
         </div>
+        <h3>Ketlen</h3>
+        <span class="team-role">Pesquisa & Conteúdo</span>
+        <p>Focado na curadoria de informações sobre neurodivergências.</p>
+      </div>
 
-        <div class="team-card">
-          <div class="team-avatar">
-            <img src="Bia.jpg" alt="Pesssoa 3">
-          </div>
-          <h3>Ana Beatriz</h3>
-          <span class="team-role">Estratégia & Mídia</span>
-          <p>Gerenciamento de comunicação e engajamento da plataforma.</p>
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="Bia.jpg" alt="Ana Beatriz">
         </div>
+        <h3>Ana Beatriz</h3>
+        <span class="team-role">Estratégia & Mídia</span>
+        <p>Gerenciamento de comunicação e engajamento da plataforma.</p>
+      </div>
 
-        <div class="team-card">
-          <div class="team-avatar">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Pessoa 4">
-          </div>
-          <h3>Lucas</h3>
-          <span class="team-role">Apresentação & Testes</span>
-          <p>Organização geral do projeto e validação de acessibilidade.</p>
+      <div class="team-card">
+        <div class="team-avatar">
+          <img src="lucas.jpg" alt="Lucas">
         </div>
+        <h3>Lucas</h3>
+        <span class="team-role">Apresentação & Testes</span>
+        <p>Organização geral do projeto e validação de acessibilidade.</p>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h3>Central das Neurodivergências</h3>
-        <p>Explorando nuances, emoções e a diversidade da mente humana através da arte.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="quemsomos.html">Quem Somos</a></li>
-          <li><a href="sobre.html">Sobre o Projeto</a></li>
-          <li><a href="neurodivergencias.html">Neurodivergência</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <h4>Conecte-se</h4>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/core.sdaalma" target="_blank" aria-label="Instagram">Instagram</a> 
-        </div>
+<!-- Rodapé Padronizado -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Central das Neurodivergências</h3>
+      <p>Explorando nuances, emoções e a diversidade da mente humana através da arte.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><a href="sobre.html">Sobre o Projeto</a></li>
+        <li><a href="neurodivergencias.html">Neurodivergência</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <h4>Conecte-se</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/core.sdaalma" target="_blank" aria-label="Instagram">Instagram</a> 
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Cores da Alma. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Cores da Alma. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
 </body>
 </html>
