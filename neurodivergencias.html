@@ -1,434 +1,444 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neurodivergências - Central das Neurodivergências</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurodivergências - Central das Neurodivergências</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-deep: #171735;
-      --bg-deep-2: #1f1f47;
+<style>
+:root {
+  --bg-deep: #171735;
+  --bg-deep-2: #1f1f47;
 
-      /* Cores das Neurodivergências */
-      --autismo: #4CAF7D;       /* Verde */
-      --autismo-glow: rgba(76, 175, 125, 0.4);
-      --dislexia: #00A3FF;      /* Azul */
-      --dislexia-glow: rgba(0, 163, 255, 0.4);
-      --tdah: #FFD93D;          /* Amarelo */
-      --tdah-glow: rgba(255, 217, 61, 0.4);
-      --dispraxia: #FF7300;     /* Laranja */
-      --dispraxia-glow: rgba(255, 115, 0, 0.4);
-      --tourette: #E8462B;      /* Vermelho */
-      --tourette-glow: rgba(232, 70, 43, 0.4);
-      --superdotacao: #7B4FA0;  /* Roxo */
-      --superdotacao-glow: rgba(123, 79, 160, 0.4);
+  /* Cores das Neurodivergências */
+  --autismo: #4CAF7D; /* Verde */
+  --autismo-glow: rgba(76, 175, 125, 0.4);
+  --dislexia: #00A3FF; /* Azul */
+  --dislexia-glow: rgba(0, 163, 255, 0.4);
+  --tdah: #FFD93D; /* Amarelo */
+  --tdah-glow: rgba(255, 217, 61, 0.4);
+  --dispraxia: #FF7300; /* Laranja */
+  --dispraxia-glow: rgba(255, 115, 0, 0.4);
+  --tourette: #E8462B; /* Vermelho */
+  --tourette-glow: rgba(232, 70, 43, 0.4);
+  --superdotacao: #7B4FA0; /* Roxo */
+  --superdotacao-glow: rgba(123, 79, 160, 0.4);
 
-      /* Cores Globais do Sistema */
-      --joy: #FFD93D;
-      --panel: rgba(255, 255, 255, 0.06);
-      --panel-border: rgba(255, 255, 255, 0.12);
-      --ink: #F5F3FF;
-      --ink-dim: #B9B6D9;
-    }
+  /* Cores Globais do Sistema */
+  --joy: #FFD93D;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-border: rgba(255, 255, 255, 0.12);
+  --ink: #F5F3FF;
+  --ink-dim: #B9B6D9;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    html, body {
-      min-height: 100vh;
-      background: radial-gradient(ellipse at 50% 20%, var(--bg-deep-2), var(--bg-deep) 70%);
-      background-attachment: fixed;
-      overflow-x: hidden;
-      font-family: 'Poppins', sans-serif;
-      color: var(--ink);
-    }
+html, body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 20%, var(--bg-deep-2), var(--bg-deep) 70%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: 
-        radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,255,0.35), transparent),
-        radial-gradient(1.5px 1.5px at 70% 65%, rgba(255,255,255,0.25), transparent),
-        radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.3), transparent),
-        radial-gradient(1.5px 1.5px at 55% 45%, rgba(255,255,255,0.2), transparent);
-      background-size: 300px 300px;
-      opacity: 0.6;
-      pointer-events: none;
-      z-index: 0;
-    }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1.5px 1.5px at 70% 65%, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 55% 45%, rgba(255,255,255,0.2), transparent);
+  background-size: 300px 300px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
 
-    /* Navigation Bar */
-    .navbar {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1100px;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 28px;
-      border-radius: 999px;
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
 
-    .nav-logo {
-      font-family: 'Baloo 2', sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--ink);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
+.nav-logo {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 24px;
-    }
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
 
-    .nav-links a {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: var(--ink-dim);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+.nav-links a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--ink-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-    .nav-links a:hover, 
-    .nav-links a.active {
-      color: var(--joy);
-    }
+.nav-links a:hover, 
+.nav-links a.active {
+  color: var(--joy);
+}
 
-    /* Estrutura da Página */
-    .container {
-      position: relative;
-      z-index: 2;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 130px 24px 60px;
-    }
+/* Estrutura da Página */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 130px 24px 60px;
+}
 
-    .page-header {
-      text-align: center;
-      margin-bottom: 50px;
-      animation: fadeInUp 0.8s ease-out;
-    }
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
+}
 
-    .page-header h1 {
-      font-family: 'Baloo 2', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
-      line-height: 1.1;
-      margin-bottom: 16px;
-      background: linear-gradient(90deg, var(--autismo), var(--tdah), var(--superdotacao));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
+.page-header h1 {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--autismo), var(--tdah), var(--superdotacao));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-    .page-header p {
-      color: var(--ink-dim);
-      max-width: 650px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      font-weight: 300;
-    }
+.page-header p {
+  color: var(--ink-dim);
+  max-width: 650px;
+  margin: 0 auto 16px auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
 
-    /* Grid de Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-    }
+.page-header h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--joy);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
 
-    /* Regra para integrar o link ao card */
-    .card-link {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      cursor: pointer;
-    }
+/* Grid de Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
 
-    .card {
-      position: relative;
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: 24px;
-      padding: 36px 28px;
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.8s ease-out;
-      overflow: hidden;
-      height: 100%;
-    }
+/* Regra para integrar o link ao card */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  padding: 36px 28px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+  overflow: hidden;
+  height: 100%;
+}
 
-    /* Customizações por Card */
-    .card.autismo:hover { border-color: var(--autismo); box-shadow: 0 10px 30px var(--autismo-glow); }
-    .card.dislexia:hover { border-color: var(--dislexia); box-shadow: 0 10px 30px var(--dislexia-glow); }
-    .card.tdah:hover { border-color: var(--tdah); box-shadow: 0 10px 30px var(--tdah-glow); }
-    .card.dispraxia:hover { border-color: var(--dispraxia); box-shadow: 0 10px 30px var(--dispraxia-glow); }
-    .card.tourette:hover { border-color: var(--tourette); box-shadow: 0 10px 30px var(--tourette-glow); }
-    .card.superdotacao:hover { border-color: var(--superdotacao); box-shadow: 0 10px 30px var(--superdotacao-glow); }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .card-icon {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
+/* Customizações por Card */
+.card.autismo:hover { border-color: var(--autismo); box-shadow: 0 10px 30px var(--autismo-glow); }
+.card.dislexia:hover { border-color: var(--dislexia); box-shadow: 0 10px 30px var(--dislexia-glow); }
+.card.tdah:hover { border-color: var(--tdah); box-shadow: 0 10px 30px var(--tdah-glow); }
+.card.dispraxia:hover { border-color: var(--dispraxia); box-shadow: 0 10px 30px var(--dispraxia-glow); }
+.card.tourette:hover { border-color: var(--tourette); box-shadow: 0 10px 30px var(--tourette-glow); }
+.card.superdotacao:hover { border-color: var(--superdotacao); box-shadow: 0 10px 30px var(--superdotacao-glow); }
 
-    .autismo .card-icon { background: var(--autismo); box-shadow: 0 0 12px var(--autismo); }
-    .dislexia .card-icon { background: var(--dislexia); box-shadow: 0 0 12px var(--dislexia); }
-    .tdah .card-icon { background: var(--tdah); box-shadow: 0 0 12px var(--tdah); }
-    .dispraxia .card-icon { background: var(--dispraxia); box-shadow: 0 0 12px var(--dispraxia); }
-    .tourette .card-icon { background: var(--tourette); box-shadow: 0 0 12px var(--tourette); }
-    .superdotacao .card-icon { background: var(--superdotacao); box-shadow: 0 0 12px var(--superdotacao); }
+.card-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  display: inline-block;
+}
 
-    .card h2 {
-      font-family: 'Baloo 2', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
+.autismo .card-icon { background: var(--autismo); box-shadow: 0 0 12px var(--autismo); }
+.dislexia .card-icon { background: var(--dislexia); box-shadow: 0 0 12px var(--dislexia); }
+.tdah .card-icon { background: var(--tdah); box-shadow: 0 0 12px var(--tdah); }
+.dispraxia .card-icon { background: var(--dispraxia); box-shadow: 0 0 12px var(--dispraxia); }
+.tourette .card-icon { background: var(--tourette); box-shadow: 0 0 12px var(--tourette); }
+.superdotacao .card-icon { background: var(--superdotacao); box-shadow: 0 0 12px var(--superdotacao); }
 
-    .autismo h2 { color: var(--autismo); }
-    .dislexia h2 { color: var(--dislexia); }
-    .tdah h2 { color: var(--tdah); }
-    .dispraxia h2 { color: var(--dispraxia); }
-    .tourette h2 { color: var(--tourette); }
-    .superdotacao h2 { color: var(--superdotacao); }
+.card h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
 
-    .card p {
-      color: var(--ink-dim);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      font-weight: 300;
-    }
+.autismo h2 { color: var(--autismo); }
+.dislexia h2 { color: var(--dislexia); }
+.tdah h2 { color: var(--tdah); }
+.dispraxia h2 { color: var(--dispraxia); }
+.tourette h2 { color: var(--tourette); }
+.superdotacao h2 { color: var(--superdotacao); }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.card p {
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
 
-    /* Rodapé */
-    .site-footer {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      background: var(--panel);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      color: var(--ink);
-      padding: 40px 24px 20px;
-      margin-top: 60px;
-    }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .footer-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
+/* Rodapé */
+.site-footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: var(--panel);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--ink);
+  padding: 40px 24px 20px;
+  margin-top: 60px;
+}
 
-    .footer-brand h3 {
-      font-family: 'Baloo 2', sans-serif;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-      color: var(--joy);
-    }
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-    .footer-brand p {
-      color: var(--ink-dim);
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
+.footer-brand h3 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--joy);
+}
 
-    .footer-links h4, .footer-social h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
+.footer-brand p {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
 
-    .footer-links ul {
-      list-style: none;
-    }
+.footer-links h4, .footer-social h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
 
-    .footer-links li {
-      margin-bottom: 8px;
-    }
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .footer-links a, .social-icons a {
-      color: var(--ink-dim);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.25s ease;
-    }
+.footer-links li {
+  margin-bottom: 8px;
+}
 
-    .footer-links a:hover, .social-icons a:hover {
-      color: var(--joy);
-    }
+.footer-links a, .social-icons a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.25s ease;
+}
 
-    .social-icons {
-      display: flex;
-      gap: 16px;
-    }
+.footer-links a:hover, .social-icons a:hover {
+  color: var(--joy);
+}
 
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 20px auto 0;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--ink-dim);
-    }
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .navbar { 
-        flex-direction: column; 
-        gap: 10px; 
-        border-radius: 20px; 
-        padding: 12px; 
-      }
-      .nav-links { gap: 16px; }
-      .container { padding-top: 160px; }
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+.footer-bottom {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-dim);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar { 
+    flex-direction: column; 
+    gap: 10px; 
+    border-radius: 20px; 
+    padding: 12px; 
+  }
+  .nav-links { gap: 16px; }
+  .container { padding-top: 160px; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Menu de Navegação Superior -->
-  <nav class="navbar">
-    <a href="index.html" class="nav-logo">Central</a>
-    <div class="nav-links">
-      <a href="quemsomos.html">Quem Somos</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="neurodivergencias.html" class="active">Neurodivergências</a>
-      <a href="contato.html">Contato</a>
+<!-- Menu de Navegação Superior -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Central</a>
+  <div class="nav-links">
+    <a href="quemsomos.html">Quem Somos</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="neurodivergencias.html" class="active">Neurodivergências</a>
+    <a href="contato.html">Contato</a>
+  </div>
+</nav>
+
+<!-- Conteúdo Principal -->
+<main class="container">
+  <header class="page-header">
+    <h1>Neurodivergências</h1>
+    <p>Neurodivergência refere-se a uma condição em que a pessoa apresenta diferenças neurológicas, comportamentais, de comunicação e de aprendizagem consideradas fora do padrão esperado pela sociedade.</p>
+    <h3>Clique nos quadrados abaixo para saber mais!</h3>
+  </header>
+
+  <div class="grid">
+    <!-- Autismo (Verde) -->
+    <a href="autismo.html" class="card-link">
+      <article class="card autismo">
+        <span class="card-icon"></span>
+        <h2>Autismo (TEA)</h2>
+        <p>O Transtorno do Espectro Autista influência a comunicação, interações sociais e as formas de perceber o mundo. Pessoas no espectro costumam ter focos intensos de interesse e sensabilidades sensoriais próprias.</p>
+      </article>
+    </a>
+
+    <!-- Dislexia (Azul) -->
+    <a href="dislexia.html" class="card-link">
+      <article class="card dislexia">
+        <span class="card-icon"></span>
+        <h2>Dislexia</h2>
+        <p>É um transtorno específico de aprendizagem caracterizado por dificuldades na leitura e/ou na escrita, que envolvem precisão, velocidade ou ambos.</p>
+      </article>
+    </a>
+
+    <!-- TDAH (Amarelo) -->
+    <a href="tdah.html" class="card-link">
+      <article class="card tdah">
+        <span class="card-icon"></span>
+        <h2>TDAH</h2>
+        <p>O Transtorno de Atenção e Hiperatividade é marcado por inquietude, impulsividade, variações na atenção, pensamentos rápidos e hiperfoco.</p>
+      </article>
+    </a>
+
+    <!-- Dispraxia (Laranja) -->
+    <a href="dispraxia.html" class="card-link">
+      <article class="card dispraxia">
+        <span class="card-icon"></span>
+        <h2>Dispraxia (TDC)</h2>
+        <p>É uma disfunção neurológica que afeta a coordenação motora, verbal e espacial da criança, podendo seguir na fase adulta.</p>
+      </article>
+    </a>
+
+    <!-- Tourette (Vermelho) -->
+    <a href="tourette.html" class="card-link">
+      <article class="card tourette">
+        <span class="card-icon"></span>
+        <h2>Síndrome de Tourette</h2>
+        <p>Caracterizada por tiques motores e vocais involuntários e repetitivos. É uma condição neurobiológica que reflete a intensidade das conexões cerebrais e respostas motoras espontâneas.</p>
+      </article>
+    </a>
+
+    <!-- Superdotação (Roxo) -->
+    <a href="superdotacao.html" class="card-link">
+      <article class="card superdotacao">
+        <span class="card-icon"></span>
+        <h2>Superdotação</h2>
+        <p>Capacidade cognitiva acima da média em áreas intelectuais, criativas ou artísticas, muitas vezes acompanhada de alta intensidade emocional e curiosidade profunda sobre o mundo.</p>
+      </article>
+    </a>
+  </div>
+</main>
+
+<!-- Rodapé Padronizado -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Central das Neurodivergências</h3>
+      <p>Explorando nuances, emoções e a diversidade da mente humana através da arte.</p>
     </div>
-  </nav>
-
-  <!-- Conteúdo Principal -->
-  <main class="container">
-    <header class="page-header">
-      <h1>Neurodivergências</h1>
-      <p>Neurodivergência refere-se a uma condição em que a pessoa apresenta diferenças neurológicas, comportamentais, de comunicação e de aprendizagem consideradas fora do padrão esperado pela sociedade.</p>
-      <h3>Clique nos quadrados abaixo para saber mais!</h3>
-    </header>
-
-    <div class="grid">
-      <!-- Autismo (Verde) -->
-      <a href="autismo.html" class="card-link">
-        <article class="card autismo">
-          <span class="card-icon"></span>
-          <h2>Autismo (TEA)</h2>
-          <p>O Transtorno do Espectro Autista influência a comunicação, interações sociais e  as formas de perceber o mundo. Pessoas no espectro costumam ter focos intensos de interesse e sensibilidades sensoriais próprias.</p>
-        </article>
-      </a>
-
-      <!-- Dislexia (Azul) -->
-      <a href="dislexia.html" class="card-link">
-        <article class="card dislexia">
-          <span class="card-icon"></span>
-          <h2>Dislexia</h2>
-          <p>É um transtorno específico de aprendizagem caracterizado por dificuldades na leitura e/ou na escrita, que envolvem precisão, velocidade ou ambos.</p>
-        </article>
-      </a>
-
-      <!-- TDAH (Amarelo) -->
-      <a href="tdah.html" class="card-link">
-        <article class="card tdah">
-          <span class="card-icon"></span>
-          <h2>TDAH</h2>
-          <p>O Transtorno de Atenção e Hiperatividade é marcado por inquietude, impulsividade, variações na atenção, pensamentos rápidos e hiperfoco.</p>
-        </article>
-      </a>
-
-      <!-- Dispraxia (Laranja) -->
-      <a href="dispraxia.html" class="card-link">
-        <article class="card dispraxia">
-          <span class="card-icon"></span>
-          <h2>Dispraxia (TDC)</h2>
-          <p>É uma disfunção neurológica que afeta a coordenação motora, verbal e espacial da criança, podendo seguir na fase adulta.</p>
-        </article>
-      </a>
-
-      <!-- Tourette (Vermelho) -->
-      <a href="tourette.html" class="card-link">
-        <article class="card tourette">
-          <span class="card-icon"></span>
-          <h2>Síndrome de Tourette</h2>
-          <p>Caracterizada por tiques motores e vocais involuntários e repetitivos. É uma condição neurobiológica que reflete a intensidade das conexões cerebrais e respostas motoras espontâneas.</p>
-        </article>
-      </a>
-
-      <!-- Superdotação (Roxo) -->
-      <a href="superdotacao.html" class="card-link">
-        <article class="card superdotacao">
-          <span class="card-icon"></span>
-          <h2>Superdotação</h2>
-          <p>Capacidade cognitiva acima da média em áreas intelectuais, criativas ou artísticas, muitas vezes acompanhada de alta intensidade emocional e curiosidade profunda sobre o mundo.</p>
-        </article>
-      </a>
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><a href="sobre.html">Sobre o Projeto</a></li>
+        <li><a href="neurodivergencias.html">Neurodivergências</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
     </div>
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h3>Central das Neurodivergências</h3>
-        <p>Explorando nuances, emoções e a diversidade da mente humana através da arte.</p>
+    <div class="footer-social">
+      <h4>Conecte-se</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/core.sdaalma" target="_blank" aria-label="Instagram">Instagram</a>
       </div>
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="quemsomos.html">Quem Somos</a></li>
-          <li><a href="sobre.html">Sobre o Projeto</a></li>
-          <li><a href="neurodivergencias.html">Neurodivergências</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </div>
-      <div class="footer-social">
-        <h4>Conecte-se</h4>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/core.sdaalma" target="_blank" aria-label="Instagram">Instagram</a>
-        </div>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Cores da Alma. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Cores da Alma. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
 </body>
 </html>
